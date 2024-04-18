@@ -57,7 +57,10 @@ public class Client {
                     System.out.println("Nhập giá: ");
                     double price = scanner.nextDouble();
                     System.out.println("Nhập trạng thái (AVAILABLE, IN_USE, UNDER_MAINTENANCE, BROKEN): ");
-                    Status status = scanner.next().equals("AVAILABLE") ? Status.AVAILABLE : scanner.next().equals("IN_USE") ? Status.IN_USE : scanner.next().equals("UNDER_MAINTENANCE") ? Status.UNDER_MAINTENANCE : Status.BROKEN;
+                    String inputStatus = scanner.next();
+                        Status status = inputStatus.equals("AVAILABLE") ? Status.AVAILABLE :
+                                        inputStatus.equals("IN_USE") ? Status.IN_USE :
+                                        inputStatus.equals("UNDER_MAINTENANCE") ? Status.UNDER_MAINTENANCE : Status.BROKEN;
                     System.out.println("Nhập vị trí: ");
                     String location = scanner.next();
                     facility.setDescription(description);
