@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="de3tk:jar">
+    <output-path>$PROJECT_DIR$/../de3tk_Client/lib</output-path>
+    <root id="archive" name="de3tk.jar">
+      <element id="module-output" name="de3tk" />
+    </root>
+  </artifact>
+</component>
