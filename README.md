@@ -18,6 +18,9 @@ import java.util.Scanner;
  * @author: nktng,
  * @date:18/04/2024,
  */
+
+
+
 public class Client {
     private static final String URL = "rmi://FIL:8611/";
 
@@ -27,8 +30,6 @@ public class Client {
 
         Scanner scanner = new Scanner(System.in);
         int option;
-
-
 
         while (true) {
             System.out.println("Vui lòng chọn một trong các lựa chọn sau:");
@@ -56,7 +57,6 @@ public class Client {
                     System.out.println("Nhập giá: ");
                     double price = scanner.nextDouble();
                     System.out.println("Nhập trạng thái (AVAILABLE, IN_USE, UNDER_MAINTENANCE, BROKEN): ");
-//                    AVAILABLE, IN_USE, UNDER_MAINTENANCE, BROKEN
                     Status status = scanner.next().equals("AVAILABLE") ? Status.AVAILABLE : scanner.next().equals("IN_USE") ? Status.IN_USE : scanner.next().equals("UNDER_MAINTENANCE") ? Status.UNDER_MAINTENANCE : Status.BROKEN;
                     System.out.println("Nhập vị trí: ");
                     String location = scanner.next();
@@ -64,7 +64,6 @@ public class Client {
                     facility.setPrice(price);
                     facility.setStatus(status);
                     facility.setLocation(location);
-
                     facilityDAO.updateFacility(facility);
                     break;
                 case 3:
